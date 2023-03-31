@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/2cbdb97e48.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="stil.css">
+	<title>PMF Memory</title>
+</head>
+<body>
+	<header>
+		<nav class="navigacijska-traka">
+			<div class="dugme">
+				<button class="navbar_toggle">
+                  <i class="fas fa-bars"></i>
+              </button>
+			</div>
+			<ul class="glavni-dio">
+              <li>
+                  <button id="upute">Upute</button>
+              </li>
+              <li>
+                  <button id="nova-igra">Nova igra</button>
+              </li>
+              <li>
+              	<button id="o-projektu">O projektu</button>
+              </li>
+          </ul>
+		</nav>
+	</header>
+
+<main>
+ <div class="container">
+		<div class="row">
+			<ul class="kartice">
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-1.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-2.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-3.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-4.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-5.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-6.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-7.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-8.jpg" alt="card-image">
+					</div>
+				</li>
+
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-1.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-2.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-3.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-4.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-5.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-6.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-7.jpg" alt="card-image">
+					</div>
+				</li>
+				<li class="karta">
+					<div class="view front-view"></div>
+					<div class="view back-view">
+						<img src="img/img-8.jpg" alt="card-image">
+					</div>
+				</li>
+			</ul>
+	 </div>
+	 <div style="margin-top:40px;">
+	 	<span class="info" id="restart"></span>
+	 </div>
+	 
+	</div>
+</main>
+<div id="myModal1" class="modal1">
+	<div class="modal-content-1">
+		<span class="zatvori2">&times;</span>
+		<div class="izbori" id="klik">
+			<p>Izaberite sa kojim karticama želite igrati</p>
+			<p id="opcija-1" onclick="prva_opcija()">1.Nastavno osoblje</p>
+			<p id="opcija-2" onclick="druga_opcija()">2.Kartice za fakultet</p>
+			<p id="opcija-3"onclick="treca_opcija()">3.Razno (mix 1. i 2. opcije)</p>
+		</div>
+	</div>
+</div>
+<div id="myModal2" class="modal2">
+	<div class="modal-content-2">
+		<span class="zatvori">&times;</span>
+		<p>
+			<h1 style="margin-top: 45px;">UPUTE</h1>
+			Cilj igrice PMF Memory je upariti sve kartice.
+			<br>
+				Na ploči se nalazi 2n kartica, gdje je n broj različitih kartica. Svaka od n kartica sadrži neki od motiva Prirodno-matematičkog fakulteta. Kartice su poredane slučajnim redoslijedom. <br> Na slikama mogu biti profesori, asistenti, učionice, slike fakulteta i drugi motivi. Svaka od kartica se na ploči nalazi tačno dva puta. <br>Sve kartice su okrenute licem (slikom) prema ploči. Igrač u svakom potezu bira dvije kartice, te ih okreće.Ukoliko su na izabranim karticama jednaki motivi, kartice ostaju otvorene. <br>Ukoliko su motivi različiti, nakon kraćeg vremena, kartice se opet okreću licem prema ploči i igrač igra novi potez. Igra završava kada igrač ispravno upari (otvori) sve kartice.
+			</p>
+	</div>
+</div>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+    <span class="close">&times;</span>
+    	<table class="table table-striped" id="tabla">
+		<tr>
+			<td>
+				Predmet 
+			</td>
+			<td>
+				Web programiranje
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Nastavno osoblje
+			</td>
+			<td>
+				prof.dr.Elmedin Selmanović,
+				asistent Sead Delalić
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Studij
+			</td>
+			<td>
+				Teorija kompjuterskih nauka
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fakultet
+			</td>
+			<td>
+				Prirodno-matematički fakultet
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Naziv projekta
+			</td>
+			<td>
+				PMF Memory
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Podaci o autoru
+			</td>
+			<td>
+				Sara Jerinić,
+				sara54jerinic@gmail.com
+			</td>
+		</tr>
+	</table>
+  </div>
+
+</div>
+
+
+<script type="text/javascript" src="logika.js"></script>
+</body>
